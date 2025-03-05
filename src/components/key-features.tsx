@@ -15,8 +15,8 @@ const nunito = Nunito({
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ title, description }) => {
   return (
-    <div className="bg-[#f8e6f8]/40 p-8 rounded-xl relative z-30">
-      <h3 className="text-[#520052] text-2xl font-semibold mb-4">{title}</h3>
+    <div className="bg-[#f8e6f8]/40 p-4 md:p-8 rounded-xl relative z-30">
+      <h3 className="text-[#520052] text-lg md:text-2xl font-semibold md:mb-4">{title}</h3>
       <p className="text-gray-800">{description}</p>
     </div>
   );
@@ -57,11 +57,12 @@ export default function FeaturesSection() {
       </div>
 
       <div className="max-w-7xl mx-auto text-center relative">
-        <div className="inline-block bg-[#eaf1fb] text-[#458de1] px-6 py-2 rounded-2xl mb-6 font-semibold relative z-20">
-          FROM IDEA TO RESULT IN MINUTES
-        </div>
+     
+        <h3 className="px-6 py-2 rounded-lg bg-[#E8F1FB] w-auto sm:w-fit text-center relative inline-block mb-4">
+          <p className="text-blue-500"> FROM IDEA TO RESULT IN MINUTES</p>
+        </h3>
 
-        <h2 className="text-3xl md:text-4xl font-bold text-[#520052] mb-12 relative z-20">
+        <h2 className="text-2xl md:text-4xl font-bold text-[#520052] mb-12 relative z-20">
           Key Features Adgen-ai offers
         </h2>
 
