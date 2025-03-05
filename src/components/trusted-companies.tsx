@@ -39,7 +39,7 @@ const heroImages = [
 
 const TrustedCompanies = () => {
   return (
-    <div className="px-4 bg-[#FAFAFA]  relative w-full  flex flex-col items-center justify-between  overflow-hidden">
+    <div className="px-4 bg-[#FAFAFA]  relative w-full  flex flex-col items-center justify-between  overflow-hidden animate-in slide-in-from-top duration-700">
       <div className="absolute inset-0 z-0  opacity-50"></div>
 
       <div className="relative z-10 max-w-4xl w-full text-center my-10">

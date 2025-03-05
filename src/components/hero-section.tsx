@@ -50,7 +50,7 @@ const HeroSection = () => {
     >
       <div className="absolute inset-0 z-0  opacity-50"></div>
 
-      <div className="relative z-10 max-w-4xl w-full px-4 mt-20 text-center mb-14">
+      <div className="relative z-10 max-w-4xl w-full px-4 mt-20 text-center mb-14 animate-in fade-in zoom-in duration-700">
         <h1 className="text-4xl md:text-5xl font-medium text-[#5F5F5F] tracking-tight mb-4">
           Generate High-converting, Smarter Adverts in minutes
           <span className="text-[#520052] ml-2">with AI</span>
@@ -58,7 +58,7 @@ const HeroSection = () => {
         <p className="text-lg text-gray-600 mb-6">
           Create compelling, high-converting ads to maximize ROI
         </p>
-        <button className="bg-[#B800B8] cursor-pointer text-white px-6 py-3 rounded-sm hover:bg-purple-700 transition-colors">
+        <button className="bg-[#B800B8] cursor-pointer text-white px-6 py-3 rounded-sm hover:bg-purple-700 transition-colors animate-in delay-150 duration-300">
           Generate New Ad →
         </button>
       </div>

@@ -24,7 +24,7 @@ export const Faq = () => {
             <h2 className="uppercase text-[#458DE1] bg-[#E8F1FB] py-2 px-6 text-center text-lg md:text-xl font-semibold leading-7 rounded-[8px] w-fit mx-auto md:mx-0">
               Questions & Answers
             </h2>
-            <h1 className="text-[#520052] font-bold text-4xl leading-12">
+            <h1 className="text-[#520052] font-bold text-2xl md:text-4xl leading-12">
               Frequently Asked Questions{" "}
               <span className="text-[#B800B8] ">(FAQ)</span>
             </h1>
@@ -49,7 +49,7 @@ export const Faq = () => {
             {visibleFaqs.map((faq: FaqDataProps, index: number) => (
               <AccordionItem key={index} value={`item-${index}`}>
                 <AccordionTrigger
-                  className={`py-4 px-6 text-lg md:text-xl leading-7 font-medium flex items-center
+                  className={`py-4 px-6 text-sm  md:text-xl leading-7 font-medium flex items-center
                 ${
                   openItem === `item-${index}`
                     ? "rounded-t-lg rounded-b-none bg-[#520052] border-t border-l border-r border-[#E9B0E9] text-white"
@@ -62,7 +62,7 @@ export const Faq = () => {
 
                 <AccordionContent
                   className={`
-                  py-4 px-6 rounded-lg bg-white text-base md:text-lg text-[#5F5F5F] font-medium
+                  py-4 px-6 rounded-lg bg-white text-sm md:text-lg text-[#5F5F5F] font-medium
                   ${
                     openItem === `item-${index}`
                       ? "rounded-b-lg rounded-t-none border border-[#E9B0E9]"

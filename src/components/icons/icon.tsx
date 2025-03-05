@@ -200,7 +200,7 @@ const Rocket = (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
 
 const Tick = (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
   <svg
-    width={18}
+    width={12}
     height={13}
     viewBox="0 0 18 13"
     fill="none"
