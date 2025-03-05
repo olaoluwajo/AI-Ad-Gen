@@ -2,13 +2,11 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-// Define a common interface for footer links if you want to later add dynamic links
 interface FooterLink {
   label: string;
   href: string;
 }
 
-// Sample links for each column – update as needed.
 const companyLinks: FooterLink[] = [
   { label: "About Us", href: "#" },
   { label: "How it Works", href: "#" },
@@ -36,7 +34,7 @@ const FooterColumn: React.FC<{ title: string; links: FooterLink[] }> = ({
 }) => {
   return (
     <div className="flex flex-col gap-4">
-      <h4 className="font-semibold text-[24px] leading-[32px] text-black">
+      <h4 className="font-semibold text-[14px] text-black uppercase tracking-wider">
         {title}
       </h4>
       <ul className="flex flex-col gap-2">
@@ -44,7 +42,11 @@ const FooterColumn: React.FC<{ title: string; links: FooterLink[] }> = ({
           <li key={link.label}>
             <a
               href={link.href}
-              className="font-bold text-[18px] leading-[28px] text-gray-600 hover:text-purple-700"
+              className="text-[13px] text-gray-600 
+                       transition-all duration-300 
+                       hover:text-[#B800B8] 
+                       hover:translate-x-1 
+                       inline-block"
             >
               {link.label}
             </a>
@@ -57,44 +59,46 @@ const FooterColumn: React.FC<{ title: string; links: FooterLink[] }> = ({
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-white border-t border-gray-200 shadow-inner">
-      <div className="container mx-auto px-4 py-12">
-        {/* Top Section: Logo, Tagline & Navigation Columns */}
-        <div className="flex flex-col md:flex-row items-start justify-between gap-12">
-          {/* Logo & Tagline */}
-          <div className="flex flex-col gap-6">
-            <div className="pl-4">
-              <Link href="/">
+    <footer className="bg-white border-t border-gray-200">
+      <div className="container mx-auto px-4 py-8">
+        {/* Top Section */}
+        <div className="flex flex-col lg:flex-row items-start justify-between gap-8">
+          {/* Left Column - Logo and Branding */}
+          <div className="flex flex-col gap-4 w-full lg:w-auto text-center lg:text-left">
+            <Link href="/" className="inline-block self-center lg:self-start">
+              <div className="flex items-center justify-center lg:justify-start gap-2">
                 <Image
                   src="/header-logo.svg"
                   alt="Adgen AI Logo"
-                  width={150}
-                  height={40}
+                  width={100}
+                  height={100}
                   priority
+                  className="mx-auto lg:mx-0"
                 />
-              </Link>
-            </div>
-            <h3 className="font-semibold text-3xl text-[#B800B8]">
+              </div>
+            </Link>
+            <p className="text-[#B800B8] font-medium text-[16px] text-center lg:text-left">
               Smarter Ads, Faster Results
-            </h3>
+            </p>
+            <p className="text-gray-500 text-[14px] text-center lg:text-left">
+              Copyright. All rights reserved.
+            </p>
           </div>
-          {/* Navigation Columns */}
-          <div className="flex flex-col sm:flex-row gap-12">
+
+          {/* Right Column - Footer Links */}
+          <div className="w-full lg:w-auto grid grid-cols-3 sm:grid-cols-3 gap-6 justify-between text-center lg:text-left">
             <FooterColumn title="Company Info" links={companyLinks} />
             <FooterColumn title="Features" links={featuresLinks} />
             <FooterColumn title="Support & Resources" links={supportLinks} />
           </div>
         </div>
-        {/* Bottom Section: Copyright and Description */}
-        <div className="mt-12 border-t border-gray-300 pt-8">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <p className="font-medium text-base text-gray-700">
-              © 2025 Adgen-ai. All rights reserved.
-            </p>
-            <div className="flex items-center gap-4 mt-4 md:mt-0">
-              {/* Vector/Image placeholder */}
-              <div className="w-20 h-24 bg-[#F8E6F8]" />
-              <p className="font-normal text-xl text-gray-600 max-w-3xl">
+
+        {/* Bottom Section */}
+        <div className="mt-8 border-t border-gray-200 pt-6">
+          <div className="flex flex-col md:flex-row items-center justify-center lg:justify-between">
+            <div className="flex flex-col lg:flex-row items-center gap-4 w-full">
+              <div className="w-16 h-16 bg-[#F8E6F8] rounded-lg mb-4 lg:mb-0 hidden lg:block" />
+              <p className="text-gray-600 text-[13px] text-center lg:text-left max-w-xl">
                 Adgen AI helps you generate video and image advertisements
                 tailored for different platforms, audiences and cultural
                 contexts, without needing design or marketing expertise.
